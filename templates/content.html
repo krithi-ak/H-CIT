@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/styles/content.css" />
+    <link rel="shortcut icon" href="/static/styles/fic1.png" type="image/x-icon">
+    <title>ExRep-Home</title>
+</head>
+<body>
+    <img class="logo-img" src="/static/styles/logs.png">
+    <nav>
+    <ul>
+        <li><a href="{{ url_for('content') }}">Home</a></li>
+        <li><a href="{{ url_for('about')}}">About</a></li>
+        <li><a href="{{ url_for('faq')}}">FAQ</a></li>
+        <li><a href="{{ url_for('login')}}">Login</a></li>
+    </ul>
+    </nav>
+    <br><br><br>
+
+    <div id="main">
+    <h2>Hi, Welcome</h2>
+    <br><br>
+    <h2>Enter the following details to predict your expenditure</h2>
+    <br><br>
+
+    <form id="forms" method="post">
+        <br>
+        <label for="Age">Age: </label>
+        <input type="number" name="age" placeholder="Enter your Age" min="0" max="100" >
+
+        <br><br>
+
+        <label for="BMI">BMI: </label>
+        <input type="number" step="any" name="bmi" placeholder="Enter your BMI" min="0" max="100">
+
+        <br><br>
+
+        <label for="Gender">Gender:</label>
+        <input type="radio" name="gender" value="2"> Male
+        <input type="radio" name="gender" value="1"> Female
+
+        <br><br>
+
+        <label for="Smoker">Smoker: </label>
+        <input type="radio" name="smoker" value="2"> Yes
+        <input type="radio" name="smoker" value="1"> No
+
+        <br> <br>
+
+        <label for="Location">Location: </label>
+        <select id="location" name="location">
+        <option value="1">North-West</option>
+        <option value="1">North-East</option>
+        <option value="1">South-West</option>
+        <option value="2">South-East</option>
+        </select>
+
+        <br><br>
+
+        <label for="Children">Children: </label>
+        <input type="number" name="children" placeholder="No. of Children" min="0" max="5">
+        <br><br>
+
+            <input type="submit" value="Submit" onclick="result.html">
+
+
+</form>
+
+</body>
+</html>

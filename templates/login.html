@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExRep-Login</title>
+    <link rel="stylesheet" href="/static/styles/login.css" />
+    <link rel="shortcut icon" href="/static/styles/fic1.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <img class="logo-img" src="/static/styles/logs.png">
+    <nav>
+    <ul>
+        <li><a href="{{ url_for('content') }}">Home</a></li>
+        <li><a href="{{ url_for('about')}}">About</a></li>
+        <li><a href="{{ url_for('faq')}}">FAQ</a></li>
+        <li><a href="{{ url_for('login')}}">Login</a></li>
+    </ul>
+    </nav>
+    <br><br><br>
+
+
+<div class="content"  method="POST">
+    <header>Sign In</header>
+    <form method="POST">
+        <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" required placeholder="Email or Phone" >
+        </div>
+        <div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" class="password" required placeholder="Password">
+            <span class="show">SHOW</span>
+        </div>
+        <div class="pass">
+            <a href="#">Forget Password?</a>
+        </div>
+        <div class="field">
+            <input type="submit" value="LOGIN">
+        </div>
+        <div class="login">Or Sign In With</div>
+        <div class="link">
+            <div class="fb">
+                <i class="fab fa-facebook-f" onclick="www.facebook.com"><span>Facebook</span></i>
+            </div>
+            <div class="insta">
+                <i class="fab fa-instagram"><span>Instagram</span></i>
+            </div>
+        </div>
+        <div class="acc">Don't have account?
+            <a href="#"> Signup Now</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    const pass_field = document.querySelector('.password');
+    const show_btn = document.querySelector('.show');
+    show_btn.addEventListener('click', function(){
+        if(pass_field.type === "password"){
+            pass_field.type = "text";
+            show_btn.style.color = "#3498db";
+            show_btn.textContent = "HIDE";
+        }
+        else{
+            pass_field.type = "password";
+            show_btn.style.color = "#222";
+            show_btn.textContent = "SHOW";
+        }
+    });
+</script>
+
+</body>
+</html>

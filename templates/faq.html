@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExRep-FAQ</title>
+    <link rel="stylesheet" href="/static/styles/about.css" />
+    <link rel="shortcut icon" href="/static/styles/fic1.png" type="image/x-icon">
+
+</head>
+<body>
+    <img class="logo-img" src="/static/styles/logs.png">
+    <nav>
+    <ul>
+        <li><a href="{{ url_for('content') }}">Home</a></li>
+        <li><a href="{{ url_for('about')}}">About</a></li>
+        <li><a href="{{ url_for('faq')}}">FAQ</a></li>
+        <li><a href="{{ url_for('login')}}">Login</a></li>
+    </ul>
+    </nav>
+    <br><br><br>
+    <div class="main">
+        <h1>Frequently Asked Questions</h1>
+        <br><br>
+        <div class="unorder">
+        <ol>
+            <li>What is ExRep?</li>
+            <p>Medical Expenses are difficult to estimate because it's high-cost conditions are rare and seemingly random.
+                ExRep is a website which helps you to predict the future medical expenses based on certain features.</p>
+            <br>
+            <li>How to calculate the future medical expenditure?</li>
+            <p>You just have to enter your age, gender, BMI, smoker/ non-smoker, umber of children and location. Then click 
+                on submit button. You'll get the result immediately.</p>
+            <br>
+            <li>What are the advantages of ExRep?</li>
+            <p>Health is the centre of everyone's life. Every part of our life relies on good health. ExRep helps in 
+                understanding which factors contribute to increase the health expenditure with insight into risk factors. 
+                It can be a potential starting point for preventive measures</p>
+            <br>
+            <li>How accurate is ExRep?</li>
+            <p>ExRep is accurate upto 89%.</p>
+            <br>
+            <br>
+        </ol>
+        </div>
+    </div>
+
+
+</body>
+</html>
